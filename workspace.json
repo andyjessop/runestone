@@ -7,6 +7,8 @@
     "app-server": "apps/app-server",
     "cdn": "apps/cdn",
     "cloudflare": "libs/cloudflare",
+    "interfaces": "libs/interfaces",
+    "kv": "libs/kv",
     "server": "libs/server"
   }
 }

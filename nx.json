@@ -1,11 +1,16 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "runestone-monorepo",
+  "npmScope": "runestone",
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/node"
+  },
+  "generators": {
+    "@andyjessop/cloudflare:worker": {
+      "buildable": true
+    }
   },
   "implicitDependencies": {
     "package.json": {
@@ -18,12 +23,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -34,5 +34,6 @@
         "projects": "dependencies"
       }
     ]
-  }
+  },
+  "defaultProject": "app-client"
 }

@@ -4,8 +4,13 @@ import { kv as createKV, KV } from '@runestone/kv';
 import { saveProject, withProject } from './middlewares/project';
 import * as project from './project';
 
+interface WorkerService {
+  fetch: (request?: Request, env?: Env) => Promise<Response>;
+}
+
 interface Env {
   BUCKET: KVNamespace;
+  CDN: WorkerService;
 }
 
 export default {
@@ -14,6 +19,10 @@ export default {
 
 async function fetch(request: Request, env: Env): Promise<unknown> {
   const kv = createKV(env.BUCKET);
+
+  const test = await env.CDN.fetch(request);
+
+  console.log(test);
 
   return app.handle(request, kv).catch((err: APIError) => {
     return error(err.code, err.message);

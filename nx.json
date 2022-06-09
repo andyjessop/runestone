@@ -8,7 +8,7 @@
     "defaultCollection": "@nrwl/node"
   },
   "generators": {
-    "@andyjessop/cloudflare:worker": {
+    "@andyjessop/nx-cloudflare:worker": {
       "buildable": true
     }
   },

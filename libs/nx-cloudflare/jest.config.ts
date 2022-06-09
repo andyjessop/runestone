@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'cloudflare',
+  displayName: 'nx-cloudflare',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {

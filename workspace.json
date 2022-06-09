@@ -6,7 +6,7 @@
     "app-client": "apps/app-client",
     "app-server": "apps/app-server",
     "cdn": "apps/cdn",
-    "cloudflare": "libs/cloudflare",
+    "nx-cloudflare": "libs/nx-cloudflare",
     "interfaces": "libs/interfaces",
     "kv": "libs/kv",
     "server": "libs/server"

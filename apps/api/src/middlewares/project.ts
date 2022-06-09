@@ -1,5 +1,5 @@
-import { KV } from "../kv";
-import { Req } from "../router";
+import { KV } from '@runestone/kv';
+import { Req } from '@andyjessop/cf-worker-server';
 
 export async function withProject(req: Req, kv: KV): Promise<void> {
   const project = req.params?.name;

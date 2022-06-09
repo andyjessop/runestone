@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@andyjessop/cf-worker-server": ["libs/server/src/index.ts"],
-      "@andyjessop/cloudflare": ["libs/cloudflare/src/index.ts"],
+      "@andyjessop/nx-cloudflare": ["libs/nx-cloudflare/src/index.ts"],
       "@runestone/interfaces": ["libs/interfaces/src/index.ts"],
       "@runestone/kv": ["libs/kv/src/index.ts"]
     }

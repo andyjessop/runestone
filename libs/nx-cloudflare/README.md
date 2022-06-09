@@ -1,4 +1,4 @@
-# cloudflare
+# nx-cloudflare
 
 This package enables you to generate a Cloudflare Worker inside an Nx monorepo. 
 
@@ -7,13 +7,13 @@ This package enables you to generate a Cloudflare Worker inside an Nx monorepo.
 It's dead easy. First, install the package from within your Nx monorepo:
 
 ```
-npm i @andyjessop/cloudflare
+npm i @andyjessop/nx-cloudflare
 ```
 
 Next, create your worker:
 
 ```
-npx nx g @andyjessop/cloudflare:worker my-worker
+npx nx g @andyjessop/nx-cloudflare:worker my-worker
 ```
 
 There's just one more thing. You need to create an API token via the Cloudflare `dashboard > My Profile > API Tokens` (make sure you give it editing capabilities for workers, KV, and R2 as well if you're planning on using those).

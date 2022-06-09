@@ -1,4 +1,4 @@
-import { error, json, Req, server } from '@andyjessop/cf-worker-server';
+import { error, json, missing, Req, server } from '@andyjessop/cf-worker-server';
 import { APIError } from '@runestone/interfaces';
 import { kv as createKV, KV } from '@runestone/kv';
 import { saveProject, withProject } from './middlewares/project';
@@ -9,7 +9,7 @@ interface WorkerService {
 }
 
 interface Env {
-  BUCKET: KVNamespace;
+  KV: KVNamespace;
   CDN: WorkerService;
 }
 
@@ -18,7 +18,7 @@ export default {
 }
 
 async function fetch(request: Request, env: Env): Promise<unknown> {
-  const kv = createKV(env.BUCKET);
+  const kv = createKV(env.KV);
 
   const test = await env.CDN.fetch(request);
 
@@ -87,6 +87,6 @@ async function validateUpdateProject({ content }: Req ) {
   }
 }
 
-app.get('*', async (req) => {
-  return new Response('404');
+app.get('*', async () => {
+  return missing('URL not found.');
 });

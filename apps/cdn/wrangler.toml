@@ -6,3 +6,8 @@ compatibility_date = "2022-05-18"
 
 [build]
 command = "nx build cdn"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "bacon-cdn"
+preview_bucket_name = 'preview-bacon-cdn'

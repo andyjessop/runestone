@@ -1,7 +1,9 @@
+interface Env {}
+
 export default {
   fetch
 };
 
-async function fetch(request: Request): Promise<Response> {
+async function fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   return new Response('ok');
 }

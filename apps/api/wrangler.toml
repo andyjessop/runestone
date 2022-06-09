@@ -5,7 +5,7 @@ main = "./src/index.ts"
 compatibility_date = "2022-05-18"
 
 kv_namespaces = [
-	 { binding = "BUCKET", preview_id = "4c23a4b7c52c4d0bb6b430bc6003980c", id = "ee7ab197c78d449fbf7f9b871b737a8e" }
+	 { binding = "KV", preview_id = "4c23a4b7c52c4d0bb6b430bc6003980c", id = "ee7ab197c78d449fbf7f9b871b737a8e" }
 ]
 
 services = [

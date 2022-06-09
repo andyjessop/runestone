@@ -1,5 +1,5 @@
 export type Handler<T extends any[]> = (request: Req, ...args: T) => Promise<Response | void>;
-export type FetchHandler<T extends any[]> = (request: Request, ...args: T) => Promise<Response | void>;
+export type FetchHandler<T extends any[]> = (request: Request, ...args: T) => Promise<Response>;
 
 export type Route<T extends any[]> = [string, RegExp, Handler<T>[]];
 

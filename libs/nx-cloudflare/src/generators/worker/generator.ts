@@ -56,14 +56,19 @@ export default async function (tree: Tree, options: WorkerGeneratorSchema) {
       sourceRoot: `${normalizedOptions.projectRoot}/src`,
       targets: {
         build: {
-          executor: "@andyjessop/cloudflare:build",
+          executor: "@andyjessop/nx-cloudflare:build",
         },
       }
     }
   );
 
   addFiles(tree, normalizedOptions);
-  const installTask = addDependenciesToPackageJson(tree, { 'wrangler': '^2.07', '@nrwl/node': '^14.2.1', }, {});
+
+  const installTask = addDependenciesToPackageJson(tree, {
+    '@cloudflare/workers-types': '^3.11.0',
+    'wrangler': '^2.07',
+    '@nrwl/node': '^14.2.1',
+  }, {});
 
   await formatFiles(tree);
 

@@ -17,6 +17,7 @@ function createResponseType(format = 'text/plain; charset=utf-8') {
 }
   
 export const json = createResponseType('application/json; charset=utf-8');
+export const html = createResponseType('text/html; charset=utf-8');
 
 export const error = (
   status = 500,

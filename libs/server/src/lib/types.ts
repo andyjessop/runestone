@@ -9,6 +9,7 @@ export interface Req extends Request {
   query: Record<string, string>;
   params: Record<string, string>;
   meta: Record<string, any>;
+  request: Request;
 };
 
 export type RouteConfig<T extends any[]> = (path: string, ...args: Handler<T>[]) => void;

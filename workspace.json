@@ -6,9 +6,10 @@
     "app-client": "apps/app-client",
     "app-server": "apps/app-server",
     "cdn": "apps/cdn",
-    "nx-cloudflare": "libs/nx-cloudflare",
     "interfaces": "libs/interfaces",
     "kv": "libs/kv",
-    "server": "libs/server"
+    "nx-cloudflare": "libs/nx-cloudflare",
+    "server": "libs/server",
+    "utils": "libs/utils"
   }
 }

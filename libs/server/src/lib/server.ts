@@ -11,6 +11,7 @@ export function server<T extends any[]>(base = '', routes: Route<T>[] = []): Ser
     const url = new URL(request.url);
     const req = request.clone() as Req;
     
+    req.request = request;
     req.content = undefined;
 
     try {
